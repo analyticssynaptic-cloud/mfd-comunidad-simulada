@@ -11,6 +11,8 @@ PUB = os.path.join(HERE, "publicacion")
 PERSONAS = os.path.join(HERE, "personas.jsonl")
 OPINIONES = os.path.join(HERE, "opiniones.jsonl")
 
+from calificar import puntaje
+
 PREGUNTA = "¿Qué le parece esta publicación de MFD en Instagram? ¿Le llama la atención, le es indiferente o no le llega?"
 
 REACCION = {
@@ -41,8 +43,7 @@ def cargar(path):
         return [json.loads(l) for l in f]
 
 def postura(p):
-    s = {"bajo": 0.1, "medio": 0.25, "alto": 0.4}[p["acceso_redes"]] + (p["estrato"] - 1) * 0.04 \
-        + (0.1 if p["ve_publicidad_de_marcas_btl"] else 0) - p["escepticismo"] * 0.25
+    s = puntaje(p)
     if s >= 0.42:
         return "le llama la atención", "good"
     if s >= 0.25:
@@ -80,9 +81,8 @@ def render_chat(turnos, participantes, rondas):
             burbujas.append(f'<div class="ronda">Ronda {ronda_actual}</div>')
         p = t["p"]
         lado = "der" if p["genero"] == "F" else "izq"
-        iniciales = "".join(w[0] for w in p["nombre"].split()[:2])
         burbujas.append(
-            f'<div class="fila {lado}"><div class="av">{html.escape(iniciales)}</div><div class="burb {t["clase"]}">'
+            f'<div class="fila {lado}"><img class="av" src="../avatares/{p["id"]}.svg" alt=""><div class="burb {t["clase"]}">'
             f'<div class="meta"><b>{html.escape(p["nombre"])}</b> · {p["edad"]} años · {html.escape(p["ciudad"])} · estrato {p["estrato"]} · '
             f'{html.escape(p["personalidad"])} · acceso {p["acceso_redes"]}</div>'
             f'<div>{html.escape(t["texto"])}</div></div></div>')
@@ -98,7 +98,7 @@ h1{{font-size:20px;color:#dc2626;margin:0 0 6px}}
 .ronda{{text-align:center;color:#888;font-size:12px;margin:18px 0 8px;letter-spacing:1px}}
 .fila{{display:flex;gap:8px;margin:8px 0;align-items:flex-end}}
 .fila.der{{flex-direction:row-reverse}}
-.av{{width:34px;height:34px;border-radius:50%;background:#dc2626;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:12px;flex-shrink:0}}
+.av{{width:46px;height:46px;flex-shrink:0}}
 .burb{{max-width:78%;padding:10px 12px;border-radius:14px;font-size:14px;line-height:1.4}}
 .izq .burb{{background:#241b1e;border-bottom-left-radius:4px}}
 .der .burb{{background:#3b1316;border-bottom-right-radius:4px}}
@@ -117,13 +117,30 @@ h1{{font-size:20px;color:#dc2626;margin:0 0 6px}}
 <div class="nota">Verde: le llama la atención · Amarillo: le es indiferente · Rojo: no le llega. Las personas son perfiles sintéticos; el texto sale de plantillas.</div>
 </div></body></html>"""
 
+def render_md(turnos, participantes, rondas):
+    L = ["# Debate simulado: publicación de MFD en Instagram", "",
+         f"**SIMULACIÓN** · {participantes} personas · {rondas} rondas · generado con reglas, sin IA de pago.", "",
+         "![Publicación](post_instagram.png)", "",
+         f"**Pregunta:** {PREGUNTA}", ""]
+    ronda_actual = None
+    for t in turnos:
+        if t["ronda"] != ronda_actual:
+            ronda_actual = t["ronda"]
+            L += ["", f"## Ronda {ronda_actual}", "", "| | Persona | Mensaje |", "|---|---|---|"]
+        p = t["p"]
+        marca = {"good": "atrae", "mid": "indiferente", "bad": "no llega"}[t["clase"]]
+        perfil = f"**{p['nombre']}** · {p['edad']} · {p['ciudad']} · estrato {p['estrato']} · {p['personalidad']} · _{marca}_"
+        L.append(f'| <img src="../avatares/{p["id"]}.svg" width="48"> | {perfil} | {t["texto"]} |')
+    L += ["", "Leyenda: atrae = le llama la atención; indiferente = le es indiferente; no llega = no le llega.", ""]
+    return "\n".join(L)
+
 def render_personas(personas, opiniones):
     op = {o["id"]: o for o in opiniones}
     filas = []
     for p in personas:
         o = op.get(p["id"], {})
         filas.append(
-            "<tr>" + "".join(f"<td>{html.escape(str(v))}</td>" for v in [
+            f'<tr><td><img src="avatares/{p["id"]}.svg" width="32"></td>' + "".join(f"<td>{html.escape(str(v))}</td>" for v in [
                 p["id"], p["nombre"], p["genero"], p["edad"], p["ciudad"], p["estrato"],
                 f'{p["ingreso_mensual_aprox_cop"]:,}', p["ocupacion"], p["acceso_redes"],
                 ", ".join(p["gustos"]), p["personalidad"], p["escepticismo"], o.get("postura", "")]) + "</tr>")
@@ -156,6 +173,8 @@ if __name__ == "__main__":
     turnos = debate(personas, a.participantes, a.rondas, rnd)
     with open(os.path.join(PUB, "debate_post.html"), "w", encoding="utf-8") as f:
         f.write(render_chat(turnos, a.participantes, a.rondas))
+    with open(os.path.join(PUB, "debate_publicacion.md"), "w", encoding="utf-8") as f:
+        f.write(render_md(turnos, a.participantes, a.rondas))
     with open(os.path.join(HERE, "personas.html"), "w", encoding="utf-8") as f:
         f.write(render_personas(personas, cargar(OPINIONES)))
-    print("ok: publicacion/debate_post.html y personas.html")
+    print("ok: publicacion/debate_post.html, publicacion/debate_publicacion.md y personas.html")

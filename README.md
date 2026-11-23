@@ -6,9 +6,21 @@ Todo el contenido de este repositorio es **sintético**. Los perfiles no son per
 
 - `generar_personas.py`: genera 10.000 perfiles con edad, ciudad, estrato, ingreso aproximado, ocupación, gustos, personalidad y escepticismo. Semilla fija, así que es reproducible.
 - `personas.jsonl`: los 10.000 perfiles.
-- `debatir.py`: opinión de cada perfil (`opiniones`) y debates en grupo (`debates`). Sin costo y sin API.
-- `opiniones.jsonl`: postura y opinión de los 10.000 perfiles.
-- `debates/`: 50 transcripciones de debates en grupos de 20 personas, 3 rondas cada una.
+- `avatares.py` y `avatares/`: un muñequito SVG por persona.
+- `debatir.py`: opinión de cada perfil (`opiniones.jsonl`) y debates en grupo (`debates/`).
+- `calificar.py` y `resultados/`: calificación de la publicación (1 a 5) por cada persona, y el índice de éxito.
+- `publicacion/`: publicación de Instagram (`post_instagram.png`, `caption.txt`), debate de la publicación en `debate_publicacion.md` (con avatares) y en HTML tipo chat (`debate_post.html`).
+- `chat_publicacion.py`: genera el debate de la publicación y `personas.html` (listado buscable).
+
+## Sistema de calificación
+
+Cada perfil tiene un puntaje según acceso a redes, estrato, si ya ve publicidad de marcas BTL y su nivel de escepticismo. De ese puntaje salen:
+
+- **Calificación** (1 a 5) y **postura**: le llama la atención, le es indiferente o no le llega.
+- **Índice de éxito** (0 a 100) = 40% calificación promedio + 40% % que le llama la atención + 20% equidad de alcance (penaliza si los estratos 5-6 alcanzan mucho más que 1-2).
+- Veredicto: 70 o más exitosa, 50 a 69 mejorable, menos de 50 débil.
+
+Los pesos y los umbrales son decisiones de diseño, no datos reales. Las diferencias por estrato salen directamente de las reglas que se escribieron, así que sirven para comparar versiones de la publicación, no para medir el mercado.
 
 ## Reproducir
 
@@ -16,6 +28,10 @@ Todo el contenido de este repositorio es **sintético**. Los perfiles no son per
 python generar_personas.py
 python debatir.py opiniones
 python debatir.py debates
+python avatares.py
+python calificar.py
+python chat_publicacion.py
+python publicacion/generar_post.py
 ```
 
 ## Pregunta de la simulación
