@@ -2,5 +2,7 @@
   {"id": "A", "descripcion": "Publicación actual: solo texto sobre fondo, sin foto ni contacto", "imagen_real": false, "cta_contacto": false, "contexto_incluyente": false},
   {"id": "B", "descripcion": "Igual pero con foto real de un evento", "imagen_real": true, "cta_contacto": false, "contexto_incluyente": false},
   {"id": "C", "descripcion": "Foto real + botón de WhatsApp + contexto que menciona barrios y pymes", "imagen_real": true, "cta_contacto": true, "contexto_incluyente": true},
-  {"id": "D", "descripcion": "Sin foto, pero con WhatsApp y contexto incluyente", "imagen_real": false, "cta_contacto": true, "contexto_incluyente": true}
+  {"id": "D", "descripcion": "Sin foto, pero con WhatsApp y contexto incluyente", "imagen_real": false, "cta_contacto": true, "contexto_incluyente": true},
+  {"id": "E", "descripcion": "Sin foto, solo con WhatsApp", "imagen_real": false, "cta_contacto": true, "contexto_incluyente": false},
+  {"id": "F", "descripcion": "Sin foto, solo con contexto incluyente", "imagen_real": false, "cta_contacto": false, "contexto_incluyente": true}
 ]
