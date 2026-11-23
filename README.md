@@ -11,6 +11,7 @@ Todo el contenido de este repositorio es **sintético**. Los perfiles no son per
 - `calificar.py` y `resultados/`: calificación de la publicación (1 a 5) por cada persona, y el índice de éxito.
 - `publicacion/`: publicación de Instagram (`post_instagram.png`, `caption.txt`), debate de la publicación en `debate_publicacion.md` (con avatares) y en HTML tipo chat (`debate_post.html`).
 - `chat_publicacion.py`: genera el debate de la publicación y `personas.html` (listado buscable).
+- `mapa_3d.py` y `mapa/`: mapa 3D con las 10.000 personas como muñequitos. Abrir `mapa/mapa_3d.html` en el navegador (necesita internet para cargar Three.js; `datos.js` debe quedar al lado). Clic en una figura para ver su perfil, opinión y el debate.
 
 ## Sistema de calificación
 
@@ -32,6 +33,7 @@ python avatares.py
 python calificar.py
 python chat_publicacion.py
 python publicacion/generar_post.py
+python mapa_3d.py
 ```
 
 ## Pregunta de la simulación
