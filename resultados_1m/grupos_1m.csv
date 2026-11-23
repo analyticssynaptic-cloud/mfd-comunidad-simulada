@@ -1,0 +1,169 @@
+estrato,ciudad,acceso_redes,calificacion,postura,personas
+1,Barranquilla,bajo,1,no le llega,8952
+1,Barranquilla,bajo,2,no le llega,2873
+1,Barranquilla,bajo,3,no le llega,127
+1,Bogotá,bajo,1,no le llega,19696
+1,Bogotá,bajo,2,no le llega,6299
+1,Bogotá,bajo,3,no le llega,300
+1,Bucaramanga,bajo,1,no le llega,4363
+1,Bucaramanga,bajo,2,no le llega,1434
+1,Bucaramanga,bajo,3,no le llega,60
+1,Cali,bajo,1,no le llega,30341
+1,Cali,bajo,2,no le llega,10057
+1,Cali,bajo,3,no le llega,445
+1,Medellín,bajo,1,no le llega,12730
+1,Medellín,bajo,2,no le llega,4033
+1,Medellín,bajo,3,no le llega,190
+1,Otra ciudad,bajo,1,no le llega,9739
+1,Otra ciudad,bajo,2,no le llega,3258
+1,Otra ciudad,bajo,3,no le llega,146
+1,Pereira,bajo,1,no le llega,3489
+1,Pereira,bajo,2,no le llega,1145
+1,Pereira,bajo,3,no le llega,50
+2,Barranquilla,medio,1,no le llega,1676
+2,Barranquilla,medio,2,no le llega,10103
+2,Barranquilla,medio,3,le es indiferente,4351
+2,Barranquilla,medio,3,no le llega,5991
+2,Barranquilla,medio,4,le es indiferente,1854
+2,Bogotá,medio,1,no le llega,3746
+2,Bogotá,medio,2,no le llega,22242
+2,Bogotá,medio,3,le es indiferente,9340
+2,Bogotá,medio,3,no le llega,13215
+2,Bogotá,medio,4,le es indiferente,4205
+2,Bucaramanga,medio,1,no le llega,868
+2,Bucaramanga,medio,2,no le llega,5173
+2,Bucaramanga,medio,3,le es indiferente,2121
+2,Bucaramanga,medio,3,no le llega,3001
+2,Bucaramanga,medio,4,le es indiferente,934
+2,Cali,medio,1,no le llega,5842
+2,Cali,medio,2,no le llega,34539
+2,Cali,medio,3,le es indiferente,14417
+2,Cali,medio,3,no le llega,20414
+2,Cali,medio,4,le es indiferente,6336
+2,Medellín,medio,1,no le llega,2427
+2,Medellín,medio,2,no le llega,14270
+2,Medellín,medio,3,le es indiferente,5945
+2,Medellín,medio,3,no le llega,8371
+2,Medellín,medio,4,le es indiferente,2528
+2,Otra ciudad,medio,1,no le llega,1904
+2,Otra ciudad,medio,2,no le llega,11005
+2,Otra ciudad,medio,3,le es indiferente,4721
+2,Otra ciudad,medio,3,no le llega,6463
+2,Otra ciudad,medio,4,le es indiferente,2070
+2,Pereira,medio,1,no le llega,653
+2,Pereira,medio,2,no le llega,3998
+2,Pereira,medio,3,le es indiferente,1681
+2,Pereira,medio,3,no le llega,2375
+2,Pereira,medio,4,le es indiferente,735
+3,Barranquilla,medio,2,no le llega,5231
+3,Barranquilla,medio,3,le es indiferente,6881
+3,Barranquilla,medio,3,no le llega,6852
+3,Barranquilla,medio,4,le es indiferente,8184
+3,Barranquilla,medio,4,le llama la atención,769
+3,Bogotá,medio,2,no le llega,11677
+3,Bogotá,medio,3,le es indiferente,15395
+3,Bogotá,medio,3,no le llega,15494
+3,Bogotá,medio,4,le es indiferente,17919
+3,Bogotá,medio,4,le llama la atención,1674
+3,Bucaramanga,medio,2,no le llega,2782
+3,Bucaramanga,medio,3,le es indiferente,3509
+3,Bucaramanga,medio,3,no le llega,3471
+3,Bucaramanga,medio,4,le es indiferente,4061
+3,Bucaramanga,medio,4,le llama la atención,341
+3,Cali,medio,2,no le llega,18164
+3,Cali,medio,3,le es indiferente,23617
+3,Cali,medio,3,no le llega,23400
+3,Cali,medio,4,le es indiferente,27451
+3,Cali,medio,4,le llama la atención,2579
+3,Medellín,medio,2,no le llega,7410
+3,Medellín,medio,3,le es indiferente,9835
+3,Medellín,medio,3,no le llega,9514
+3,Medellín,medio,4,le es indiferente,11299
+3,Medellín,medio,4,le llama la atención,1062
+3,Otra ciudad,medio,2,no le llega,5880
+3,Otra ciudad,medio,3,le es indiferente,7773
+3,Otra ciudad,medio,3,no le llega,7498
+3,Otra ciudad,medio,4,le es indiferente,8803
+3,Otra ciudad,medio,4,le llama la atención,844
+3,Pereira,medio,2,no le llega,2132
+3,Pereira,medio,3,le es indiferente,2726
+3,Pereira,medio,3,no le llega,2846
+3,Pereira,medio,4,le es indiferente,3296
+3,Pereira,medio,4,le llama la atención,278
+4,Barranquilla,alto,3,le es indiferente,1194
+4,Barranquilla,alto,4,le es indiferente,5192
+4,Barranquilla,alto,4,le llama la atención,1323
+4,Barranquilla,alto,5,le llama la atención,10088
+4,Bogotá,alto,3,le es indiferente,2623
+4,Bogotá,alto,4,le es indiferente,11498
+4,Bogotá,alto,4,le llama la atención,3206
+4,Bogotá,alto,5,le llama la atención,22335
+4,Bucaramanga,alto,3,le es indiferente,584
+4,Bucaramanga,alto,4,le es indiferente,2599
+4,Bucaramanga,alto,4,le llama la atención,731
+4,Bucaramanga,alto,5,le llama la atención,5111
+4,Cali,alto,3,le es indiferente,4003
+4,Cali,alto,4,le es indiferente,17816
+4,Cali,alto,4,le llama la atención,4866
+4,Cali,alto,5,le llama la atención,34594
+4,Medellín,alto,3,le es indiferente,1715
+4,Medellín,alto,4,le es indiferente,7261
+4,Medellín,alto,4,le llama la atención,2059
+4,Medellín,alto,5,le llama la atención,14365
+4,Otra ciudad,alto,3,le es indiferente,1297
+4,Otra ciudad,alto,4,le es indiferente,5637
+4,Otra ciudad,alto,4,le llama la atención,1588
+4,Otra ciudad,alto,5,le llama la atención,10956
+4,Pereira,alto,3,le es indiferente,487
+4,Pereira,alto,4,le es indiferente,2084
+4,Pereira,alto,4,le llama la atención,559
+4,Pereira,alto,5,le llama la atención,4004
+5,Barranquilla,alto,3,le es indiferente,22
+5,Barranquilla,alto,4,le es indiferente,1865
+5,Barranquilla,alto,4,le llama la atención,762
+5,Barranquilla,alto,5,le llama la atención,7145
+5,Bogotá,alto,3,le es indiferente,49
+5,Bogotá,alto,4,le es indiferente,4317
+5,Bogotá,alto,4,le llama la atención,1794
+5,Bogotá,alto,5,le llama la atención,15791
+5,Bucaramanga,alto,3,le es indiferente,9
+5,Bucaramanga,alto,4,le es indiferente,951
+5,Bucaramanga,alto,4,le llama la atención,389
+5,Bucaramanga,alto,5,le llama la atención,3589
+5,Cali,alto,3,le es indiferente,71
+5,Cali,alto,4,le es indiferente,6556
+5,Cali,alto,4,le llama la atención,2729
+5,Cali,alto,5,le llama la atención,24568
+5,Medellín,alto,3,le es indiferente,27
+5,Medellín,alto,4,le es indiferente,2782
+5,Medellín,alto,4,le llama la atención,1167
+5,Medellín,alto,5,le llama la atención,10361
+5,Otra ciudad,alto,3,le es indiferente,23
+5,Otra ciudad,alto,4,le es indiferente,2133
+5,Otra ciudad,alto,4,le llama la atención,810
+5,Otra ciudad,alto,5,le llama la atención,8027
+5,Pereira,alto,3,le es indiferente,8
+5,Pereira,alto,4,le es indiferente,808
+5,Pereira,alto,4,le llama la atención,305
+5,Pereira,alto,5,le llama la atención,2904
+6,Barranquilla,alto,4,le es indiferente,901
+6,Barranquilla,alto,4,le llama la atención,245
+6,Barranquilla,alto,5,le llama la atención,6909
+6,Bogotá,alto,4,le es indiferente,1968
+6,Bogotá,alto,4,le llama la atención,517
+6,Bogotá,alto,5,le llama la atención,15137
+6,Bucaramanga,alto,4,le es indiferente,459
+6,Bucaramanga,alto,4,le llama la atención,111
+6,Bucaramanga,alto,5,le llama la atención,3438
+6,Cali,alto,4,le es indiferente,3022
+6,Cali,alto,4,le llama la atención,815
+6,Cali,alto,5,le llama la atención,23598
+6,Medellín,alto,4,le es indiferente,1200
+6,Medellín,alto,4,le llama la atención,330
+6,Medellín,alto,5,le llama la atención,9602
+6,Otra ciudad,alto,4,le es indiferente,1034
+6,Otra ciudad,alto,4,le llama la atención,237
+6,Otra ciudad,alto,5,le llama la atención,7687
+6,Pereira,alto,4,le es indiferente,342
+6,Pereira,alto,4,le llama la atención,88
+6,Pereira,alto,5,le llama la atención,2735

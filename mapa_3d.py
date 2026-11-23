@@ -69,7 +69,7 @@ button.on{background:#dc2626;border-color:#dc2626}
 </style></head><body>
 <div id="top">
   <h1>Comunidad simulada MFD · 3D</h1>
-  <p>10.000 personas en el mapa. Color = postura. Altura = estrato. Clic en una persona para ver su ficha y su opinión.</p>
+  <p>Muestra de 10.000 personas de una comunidad simulada de 1.000.000 (resumen en resultados_1m/resumen_1m.md). Color = postura. Altura = estrato. Clic en una persona para ver su ficha y su opinión.</p>
   <div>
     <button data-f="todas" class="on">Todas</button>
     <button data-f="atrae">Atrae</button>
